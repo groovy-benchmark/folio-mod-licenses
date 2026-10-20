@@ -1,0 +1,93 @@
+get:
+  tags:
+    - Amendments
+  summary: Get a specified amendment record
+  operationId: getAmendment
+  parameters:
+    - $ref: ../components/parameters/amendmentId.yaml
+    - $ref: ../common/parameters/x-okapi-tenant.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LicenseAmendment.yaml
+    '400':
+      description: Bad request error
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not found error
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: ../common/schemas/GrailsErrorResponse.yaml
+put:
+  tags:
+    - Amendments
+  summary: Update amendment record
+  operationId: putAmendment
+  parameters:
+    - $ref: ../components/parameters/amendmentId.yaml
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/LicenseAmendment.yaml
+    required: true
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/LicenseAmendment.yaml
+    '400':
+      description: Bad request error
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not found error
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            $ref: ../common/schemas/ValidationErrorResponse.yaml
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: ../common/schemas/GrailsErrorResponse.yaml
+delete:
+  tags:
+    - Amendments
+  summary: Delete a specified amendment record
+  operationId: deleteAmendment
+  parameters:
+    - $ref: ../components/parameters/amendmentId.yaml
+  responses:
+    '204':
+      description: No content
+    '400':
+      description: Bad request error
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not found error
+    '500':
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: ../common/schemas/GrailsErrorResponse.yaml

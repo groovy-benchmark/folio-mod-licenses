@@ -1,0 +1,34 @@
+import org.olf.licenses.License
+import org.olf.licenses.LicenseOrg
+import org.olf.licenses.AlternateName
+
+import groovy.transform.*
+
+@Field License license
+
+inherits template: '/licenseCore/licenseCore'
+
+def should_include = [
+  'type',
+  'orgs',
+  'amendments'
+]
+
+def altNames = license.alternateNames?.toSorted { AlternateName a, AlternateName b -> a.name <=> b.name } ?: []
+
+// We can start the pre-fetching of things we are going to need.
+final String objectProperty = 'orgsUuid_object'
+if ( controllerName == 'license' && actionName.toLowerCase() == 'show' ) {
+  // Prefetch the orgs.
+  license.orgs?.each { LicenseOrg lo ->
+    if(lo.org?.respondsTo(objectProperty)){
+      // Just invoke. We will deal with the return value later. This will start the fetching now in parallel threads.
+      lo.org.invokeMethod(objectProperty, null)
+    }
+  }
+}
+
+// The majority of this template is inherited from the parent template. Just add the extensions.
+json g.render(license, [includes: should_include, expand: ['type', 'orgs', 'amendments']]) {
+  alternateNames g.render(altNames)
+}

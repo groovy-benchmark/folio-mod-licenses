@@ -1,0 +1,36 @@
+#%RAML 1.0
+
+title: Licenses API
+baseUri: http://localhost:9130/licenses/
+version: v1
+
+documentation:
+  - title: mod-licenses API
+    content: This documents the API calls that can be made to query and manage licenses
+
+types:
+  License: !include license.json
+
+
+/licenses:
+  /licenses:
+    get:
+      description: List current licenses
+      responses:
+        200:
+          description: "OK"
+    post:
+      description: Create a new license
+      body:
+        application/json:
+          type: License
+    /{licenseId}:
+      get:
+        description: Retrieve a specific license
+      put:
+        description: Update a specific license
+  /refdata:
+    description: List all refdata categories currently known
+  /custprops:
+    description: List all custom property definitions
+

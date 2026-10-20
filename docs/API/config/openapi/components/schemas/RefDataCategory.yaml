@@ -1,0 +1,15 @@
+type: object
+required:
+  - id
+properties:
+  desc:
+    type: string
+  id:
+    type: string
+    readOnly: true
+  internal:
+    type: boolean
+  values:
+    type: array
+    items:
+      $ref: ./RefData.yaml

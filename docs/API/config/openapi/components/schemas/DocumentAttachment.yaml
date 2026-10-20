@@ -1,0 +1,23 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+    format: uuid
+    readOnly: true
+  name:
+    type: string
+  note:
+    type: string
+  url:
+    type: string
+    format: uri
+  dateCreated:
+    type: string
+    format: date-time
+    readOnly: true
+  lastUpdated:
+    type: string
+    format: date-time
+    readOnly: true

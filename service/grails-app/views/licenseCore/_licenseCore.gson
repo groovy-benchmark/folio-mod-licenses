@@ -1,0 +1,43 @@
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import org.olf.licenses.LicenseCore
+import groovy.transform.Field
+
+@Field LicenseCore licenseCore
+
+def should_include = [
+  'id',
+  'name',
+  'description',
+  'dateCreated',
+  'lastUpdated',
+  'status',
+  'endDateSemantics',
+  'links',
+  'tags',
+  'docs',
+  'contacts',
+  'supplementaryDocs',
+  'customProperties'
+]
+
+//json {
+//  test "success"
+//}
+json g.render(licenseCore, [includes: should_include, expand: ['tags', 'customProperties', 'endDateSemantics', 'status', 'contacts', 'docs', 'supplementaryDocs' ]]) {
+  if (licenseCore.startDate) startDate (DateTimeFormatter.ISO_LOCAL_DATE.format(licenseCore.startDate))
+  if (licenseCore.endDate) endDate (DateTimeFormatter.ISO_LOCAL_DATE.format(licenseCore.endDate))
+  openEnded licenseCore.openEnded
+}
+// The new date formats seem to be causing issues when included here. So Exclude them from g.render and explicitly include them below.
+//json g.render(licenseCore, [includes: should_include, expand: ['tags', 'customProperties', 'status', 'contacts', 'docs', 'supplementaryDocs' ]]) {
+//  if (licenseCore.startDate) startDate (DateTimeFormatter.ISO_LOCAL_DATE.format(licenseCore.startDate))
+//  if (licenseCore.endDate) endDate (DateTimeFormatter.ISO_LOCAL_DATE.format(licenseCore.endDate))
+//
+//  _links {
+//    linkedResources {
+//      href "/licenses/licenseLinks?filter=owner.id%3d${licenseCore.id}"
+//    }
+//  }
+//  openEnded licenseCore.openEnded
+//}

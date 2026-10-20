@@ -1,0 +1,5 @@
+import groovy.transform.*
+import org.olf.general.DocumentAttachment
+
+@Field DocumentAttachment documentAttachment
+json g.render(documentAttachment, [expand:['atType', 'fileUpload'] ])

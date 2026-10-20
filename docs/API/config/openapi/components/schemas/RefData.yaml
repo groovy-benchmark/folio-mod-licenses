@@ -1,0 +1,13 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: string
+    readOnly: true
+  label:
+    type: string
+  value:
+    type: string
+  owner:
+    $ref: ./RefDataCategory.yaml

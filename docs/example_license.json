@@ -1,0 +1,67 @@
+{
+	"id": "ff8081816889eb56016889f142d9003b",
+	"dateCreated": "2019-01-26T11:35:16Z",
+	"links": [{
+		"id": "ff8081816889eb56016889f142d9003c",
+		"linkType": "kb-ebsco.package",
+		"linkLabel": "An example link to an EKB or eholdings defined package",
+		"owner": {
+			"id": "ff8081816889eb56016889f142d9003b"
+		},
+		"direction": "out",
+		"relation": "describes",
+		"linkId": "12-334"
+	}],
+	"customProperties": {
+		"walkInAccess": [{
+			"id": 14,
+			"value": {
+				"id": "ff8081816889eb56016889f138ff0008",
+				"value": "yes",
+				"label": "Yes"
+			},
+			"type": "class com.k_int.web.toolkit.custprops.types.CustomPropertyRefdata"
+		}],
+		"licenseLocation": [{
+			"id": 16,
+			"value": "sent in, sent back, queried, lost, found, subjected to public inquiry, lost again, and finally buried in soft peat for three months and recycled as firelighters.",
+			"type": "class com.k_int.web.toolkit.custprops.types.CustomPropertyText"
+		}],
+		"anIntegerProp": [{
+			"id": 15,
+			"value": 34,
+			"type": "class com.k_int.web.toolkit.custprops.types.CustomPropertyInteger"
+		}],
+		"aDecimalProp": [{
+			"id": 17,
+			"value": 1.23,
+			"type": "class com.k_int.web.toolkit.custprops.types.CustomPropertyDecimal"
+		}]
+	},
+	"tags": [{
+		"id": 18,
+		"normValue": "legacy",
+		"value": "legacy"
+	}],
+	"lastUpdated": "2019-01-26T11:35:16Z",
+	"name": "Test License 001",
+	"type": {
+		"id": "ff8081816889eb56016889ec61170001",
+		"value": "actual",
+		"label": "Actual",
+		"owner": {
+			"id": "ff8081816889eb56016889ec608f0000",
+			"desc": "License.Type"
+		}
+	},
+	"status": {
+		"id": "ff8081816889eb56016889ec61370004",
+		"value": "current",
+		"label": "Current",
+		"owner": {
+			"id": "ff8081816889eb56016889ec61320003",
+			"desc": "License.Status"
+		}
+	},
+	"description": "This is a test licenses"
+}

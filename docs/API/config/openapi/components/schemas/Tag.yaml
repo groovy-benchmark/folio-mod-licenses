@@ -1,0 +1,11 @@
+type: object
+required:
+  - id
+properties:
+  id:
+    type: integer
+    readOnly: true
+  value:
+    type: string
+  normValue:
+    type: string

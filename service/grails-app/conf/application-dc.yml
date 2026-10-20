@@ -1,0 +1,51 @@
+##
+# This config file connects to the postgres install from a rancher desktop instance.
+# Use the flag '-Dgrails.env=rancher-desktop-db' when running
+##
+
+dataSource:
+  dbCreate: none
+  url: "jdbc:postgresql://${db.host:localhost}:${db.port:5432}/${db.database:okapi_modules_test}" # Port 5432 forwarded so as not to clash.
+  username: postgres
+  password: pa55w0rd
+  driverClassName: org.postgresql.Driver
+  dialect: com.k_int.hibernate.dialects.postgres.KIPostgres94Dialect
+  schemaHandler: com.k_int.okapi.OkapiSchemaHandler
+  logSql: false
+  properties:
+    jmxEnabled: ${db.jmxEnabled}
+    maximumPoolSize: ${db.maxpoolsize}
+    transactionIsolation: ${db.transactionIsolation}
+  hibernate:
+    enable_lazy_load_no_trans: true
+
+db:
+  maxpoolsize: 15
+  transactionIsolation: TRANSACTION_READ_COMMITTED
+  jmxEnabled: true
+  jmxExport: true
+
+okapi: 
+  service:
+    host: localhost
+    port: 30100
+logging:
+  config: classpath:logback-development.xml
+
+endpoints:
+  include-stack-trace: true # This being true for dev builds allows us to see stacktraces in the responses
+
+#    register: true
+#    deploy: true
+
+
+# BF Sunflower folio client config override
+accesscontrol:
+  folio:
+    baseokapiurl: "https://kong-bugfest-sunflower.int.aws.folio.org"
+    tenantname: "fs09000000"
+    patronid: "9eb67301-6f6e-468f-9b1a-6134dc39a684"
+    userlogin: "folio"
+    userpassword: "folio"
+  acqunits:
+    enabled: true

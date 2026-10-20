@@ -1,0 +1,56 @@
+{
+      "name": "Academic Rights Press/Test Consortium/InteLex Collections - Perpetual Purchase Agreement",
+      "description": "This is a test licenses",
+      "customProperties": {
+          "WalkInAccess" : [
+              {"value":  "Yes" }
+          ],
+	  "AnnualOptOut": [
+	      {"value": "yes"}
+	  ],
+	  "AnnualOptOutNotes": [
+	      {"value": "9.2 The Sub-Licensee may terminate this Sub-Licence at any time without cause on the anniversary date as set out on the Subscription Order and Acceptance Form (and subsequently in the Order Confirmation Email (Institution)) by giving Jisc Collections sixty days’ notice prior to that anniversary date."}
+	  ],
+	  "ILL": [ {"value": "yes"} ],
+	  "PartnerAccess": [ {"value": "yes"} ],
+	  "IncludeInCoursepacks": [ {"value": "yes"} ],
+	  "APCAndOffsetting": [ {"value": "yes"} ],
+	  "AuthorisedAccess": [ {"value": "yes"} ],
+	  "ConcurrentAccess": [ {"value": "yes"} ],
+	  "RemoteAccess": [ {"value": "yes"} ],
+	  "PCA": [ {"value": "yes"} ],
+	  "MultiSite": [ {"value": "yes"} ],
+	  "IncludeInVLE": [ {"value": "yes"} ],
+	  "EnterpriseAccess": [ {"value": "yes"} ],
+	  "AlumniAccess": [ {"value": "yes"} ],
+	  "TextAndDatMining": [ {"value": "yes"} ],
+	  "TextAndDatMiningNotes": [ {"value": "3.1.7.9 use the Licensed Material to perform and engage in text mining/data mining activities for academic research and other Educational Purposes and allow Authorised Users to mount, load and integrate the results on a Secure Network and use the results in accordance with this Sub-Licence."} ],
+	  "allRightsReserved": [ {"value": "yes"} ],
+	  "applicabaleCopyrightLaw": [ {"value": ""} ],
+	  "archivingAllowed": [ {"value": "yes"} ],
+	  "archivingFormat": [ {"value": "yes"} ],
+	  "confidentialityofAgreementRequired": [ {"value": "yes"} ],
+	  "confidentialityofUserInformationProtected": [ {"value": "yes"} ],
+	  "copyDigital": [ {"value": "yes"} ],
+	  "copyPrint": [ {"value": "yes"} ],
+	  "coursePackElectronic": [ {"value": "yes"} ],
+	  "coursePackPrint": [ {"value": "yes"} ],
+	  "distanceEducation": [ {"value": "yes"} ],
+	  "fairUseClause": [ {"value": "yes"} ],
+	  "governingJurisdiction": [ {"value": "yes"} ],
+	  "governingLaw": [ {"value": "yes"} ],
+	  "illElectronic": [ {"value": "yes"} ],
+	  "illPrint": [ {"value": "yes"} ],
+	  "illSecureElectronic": [ {"value": "yes"} ],
+	  "indemnificationbyLicensee": [ {"value": "yes"} ],
+	  "indemnificationbyLicensor": [ {"value": "yes"} ],
+	  "licenseEndAdvanceNoticeRequired": [ {"value": "yes"} ],
+	  "licenseLocation": [ {"value": "yes"} ],
+	  "otherRestrictions": [ {"value": "yes"} ],
+	  "perpetualAccess": [ {"value": "yes"} ],
+	  "publisherAcceptsSERU": [ {"value": "yes"} ],
+	  "reservesElectronic": [ {"value": "yes"} ],
+	  "reservesPrint": [ {"value": "yes"} ],
+	  "scholarlySharing": [ {"value": "yes"} ]
+      }
+} 
