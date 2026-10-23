@@ -47,3 +47,10 @@ cdx-bom.json
 
 # Mac
 .DS_Store
+
+# Claude
+.claude/
+CLAUDE.md
+CLAUDE-SECURITY-*/
+claude_security_results/
+/*.sarif
